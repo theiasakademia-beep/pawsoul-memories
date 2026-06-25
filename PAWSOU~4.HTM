@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alvida Tommy — The Goodbye They Deserve</title>
+<meta name="description" content="Your pet deserves a goodbye as beautiful as the love they gave. Custom portrait art. India.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500&family=Noto+Sans+Devanagari:wght@400;600&display=swap');
+
+:root {
+  --navy: #1B2A4A;
+  --amber: #C4820A;
+  --amber-glow: rgba(196,130,10,0.13);
+  --bg: #0e1422;
+  --card: #131e30;
+  --text: #ddd8ce;
+  --muted: #7a8fa8;
+  --soft: #a0b4c8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.7; }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(180deg, #060912 0%, #0e1422 75%);
+  padding: 52px 24px 44px;
+  text-align: center; position: relative; overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 50% 30%, rgba(196,130,10,0.07) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Tommy portrait circle */
+.tommy-wrap {
+  width: 240px; height: 240px;
+  margin: 0 auto 32px;
+  position: relative;
+}
+/* Outer amber glow ring */
+.tommy-wrap::before {
+  content: '';
+  position: absolute; inset: -14px; border-radius: 50%;
+  border: 2px solid rgba(196,130,10,0.2);
+  pointer-events: none;
+}
+/* Main amber ring */
+.tommy-wrap::after {
+  content: '';
+  position: absolute; inset: -7px; border-radius: 50%;
+  border: 10px solid #C4820A;
+  box-shadow: 0 0 50px rgba(196,130,10,0.3), inset 0 0 20px rgba(0,0,0,0.3);
+  pointer-events: none;
+}
+.tommy-img {
+  width: 100%; height: 100%; border-radius: 50%;
+  object-fit: cover; display: block;
+  /* inner silver ring like the actual logo */
+  box-shadow: inset 0 0 0 2px rgba(180,190,210,0.3);
+}
+/* Fallback if tommy.png not found */
+.tommy-fallback {
+  width: 100%; height: 100%; border-radius: 50%;
+  background: var(--card);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 8px;
+}
+.tommy-fallback p { font-size: 11px; color: var(--muted); letter-spacing: 1px; padding: 0 16px; text-align: center; }
+
+.hero-eyebrow {
+  font-size: 10px; letter-spacing: 4px; color: var(--amber);
+  text-transform: uppercase; margin-bottom: 14px; opacity: 0.8;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 8vw, 52px);
+  font-weight: 400; color: #fff; line-height: 1.15; margin-bottom: 10px;
+}
+.hero h1 em { font-style: italic; color: var(--amber); display: block; }
+.hero-tagline {
+  font-family: 'Playfair Display', serif;
+  font-size: 15px; font-style: italic; color: var(--soft); margin-bottom: 8px;
+}
+.hero-hindi {
+  font-family: 'Noto Sans Devanagari', sans-serif;
+  font-size: 14px; color: var(--amber); opacity: 0.6; margin-bottom: 28px;
+}
+
+/* Proceeds badge */
+.proceeds-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(196,130,10,0.08); border: 1px solid rgba(196,130,10,0.2);
+  border-radius: 20px; padding: 7px 16px; margin-top: 4px;
+  font-size: 12px; color: rgba(196,130,10,0.8); letter-spacing: 0.3px;
+}
+
+/* ── HOOK ── */
+.hook { padding: 36px 24px 24px; max-width: 440px; margin: 0 auto; text-align: center; }
+.hook p { font-size: 15px; color: var(--soft); line-height: 1.9; margin-bottom: 12px; }
+.hook p em { font-style: italic; color: rgba(196,130,10,0.8); }
+
+/* ── DIVIDER ── */
+.div-line {
+  display: flex; align-items: center; gap: 14px;
+  padding: 0 24px; max-width: 400px; margin: 4px auto;
+}
+.div-line::before, .div-line::after {
+  content: ''; flex: 1; height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(196,130,10,0.25), transparent);
+}
+.div-line span { font-size: 16px; color: var(--amber); opacity: 0.5; }
+
+/* ── ORDER SECTION ── */
+.order-wrap { padding: 12px 20px 56px; max-width: 480px; margin: 0 auto; }
+.order-label {
+  font-size: 10px; letter-spacing: 4px; color: var(--amber);
+  text-transform: uppercase; margin-bottom: 10px; opacity: 0.7;
+  text-align: center; display: block;
+}
+.order-wrap h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 4vw, 26px); font-weight: 400;
+  color: #fff; text-align: center; margin-bottom: 6px;
+}
+.order-wrap .sub {
+  font-size: 13px; color: var(--muted);
+  text-align: center; margin-bottom: 28px; font-style: italic;
+}
+
+/* Keepsakes */
+.keepsakes { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+.keepsake {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 16px; border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.06);
+  background: var(--card); cursor: pointer; transition: all 0.2s;
+}
+.keepsake:hover { border-color: rgba(196,130,10,0.35); }
+.keepsake.on { border-color: var(--amber); background: var(--amber-glow); }
+.k-icon { font-size: 22px; flex-shrink: 0; }
+.k-body { flex: 1; }
+.k-name { font-size: 14px; color: var(--soft); }
+.k-sub  { font-size: 11px; color: var(--muted); margin-top: 1px; }
+.k-price { font-family: 'Playfair Display', serif; font-size: 16px; color: var(--amber); flex-shrink: 0; }
+
+/* Form */
+.form-body { display: flex; flex-direction: column; gap: 16px; }
+.field label {
+  display: block; font-size: 11px; color: var(--amber);
+  letter-spacing: 1.5px; text-transform: uppercase;
+  margin-bottom: 7px; opacity: 0.85;
+}
+.field input, .field textarea {
+  width: 100%; padding: 12px 15px;
+  background: var(--card); border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 10px; color: var(--text); font-size: 14px;
+  font-family: 'Inter', sans-serif; font-weight: 300;
+  transition: border-color 0.2s; outline: none;
+}
+.field input::placeholder, .field textarea::placeholder { color: rgba(255,255,255,0.18); }
+.field input:focus, .field textarea:focus { border-color: rgba(196,130,10,0.5); }
+.field textarea { resize: vertical; min-height: 72px; }
+
+.upload-zone {
+  border: 1px dashed rgba(196,130,10,0.3); border-radius: 12px;
+  padding: 24px 16px; text-align: center; cursor: pointer;
+  transition: all 0.2s; position: relative;
+  background: rgba(196,130,10,0.02);
+}
+.upload-zone:hover { border-color: var(--amber); background: rgba(196,130,10,0.05); }
+.upload-zone input { position: absolute; inset: 0; opacity: 0; cursor: pointer; padding: 0; }
+.upload-zone .uz-icon { font-size: 26px; margin-bottom: 8px; opacity: 0.55; }
+.upload-zone p { font-size: 13px; color: var(--muted); }
+.upload-zone .uz-sub { font-size: 11px; color: rgba(255,255,255,0.18); margin-top: 3px; }
+.upload-zone .uz-name { font-size: 12px; color: var(--amber); margin-top: 8px; display: none; }
+
+/* Buttons */
+.btn-wa {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%; padding: 16px; background: #25D366; color: white;
+  border: none; border-radius: 12px; font-size: 15px; font-weight: 500;
+  cursor: pointer; text-decoration: none; font-family: 'Inter', sans-serif;
+  transition: all 0.2s; letter-spacing: 0.3px;
+}
+.btn-wa:hover { background: #1da850; transform: translateY(-1px); }
+.btn-copy {
+  width: 100%; padding: 13px; background: transparent;
+  border: 1px solid rgba(196,130,10,0.25); border-radius: 12px;
+  color: var(--muted); font-size: 13px; cursor: pointer;
+  font-family: 'Inter', sans-serif; transition: all 0.2s; margin-top: 10px;
+}
+.btn-copy:hover { border-color: var(--amber); color: var(--amber); }
+.or-div {
+  display: flex; align-items: center; gap: 12px; margin: 14px 0;
+}
+.or-div::before, .or-div::after { content: ''; flex: 1; height: 1px; background: rgba(255,255,255,0.05); }
+.or-div span { font-size: 10px; color: rgba(255,255,255,0.18); letter-spacing: 2px; }
+.success-msg {
+  display: none; margin-top: 16px; background: rgba(196,130,10,0.07);
+  border: 1px solid rgba(196,130,10,0.22); border-radius: 12px;
+  padding: 16px; text-align: center;
+}
+.success-msg p { font-size: 13px; color: var(--soft); line-height: 1.7; }
+.success-msg strong { color: var(--amber); }
+
+/* ── STORY ── */
+.story { padding: 56px 24px; max-width: 440px; margin: 0 auto; text-align: center; }
+.s-label {
+  font-size: 10px; letter-spacing: 4px; color: var(--amber);
+  text-transform: uppercase; margin-bottom: 20px; opacity: 0.6;
+}
+.story h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(20px, 4vw, 26px); font-weight: 400;
+  color: #fff; line-height: 1.4; margin-bottom: 20px;
+}
+.story h2 em { font-style: italic; color: var(--amber); }
+.story p { font-size: 14px; color: var(--muted); margin-bottom: 14px; line-height: 1.9; }
+
+/* ── PROMISE ── */
+.promise { padding: 32px 24px 56px; max-width: 440px; margin: 0 auto; }
+.promise-items { display: flex; flex-direction: column; gap: 24px; }
+.pi { display: flex; gap: 14px; align-items: flex-start; }
+.pi-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--amber); flex-shrink: 0; margin-top: 8px; opacity: 0.7; }
+.pi-text h3 { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 400; color: var(--soft); margin-bottom: 4px; }
+.pi-text p { font-size: 13px; color: var(--muted); line-height: 1.7; }
+
+/* ── CLOSING ── */
+.closing { padding: 56px 24px 48px; text-align: center; max-width: 380px; margin: 0 auto; }
+.closing blockquote {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(17px, 4vw, 22px); font-style: italic;
+  color: rgba(255,255,255,0.65); line-height: 1.6; margin-bottom: 16px;
+}
+.closing blockquote em { color: var(--amber); font-style: normal; }
+.closing .attrib { font-size: 11px; color: var(--muted); letter-spacing: 1px; }
+
+/* ── FOOTER ── */
+footer { padding: 28px 24px 48px; border-top: 1px solid rgba(255,255,255,0.04); text-align: center; }
+footer p { font-size: 11px; color: rgba(255,255,255,0.18); line-height: 2.1; }
+footer a { color: rgba(196,130,10,0.45); text-decoration: none; }
+</style>
+</head>
+<body>
+
+<!-- ── HERO ── -->
+<section class="hero">
+
+  <!-- Tommy portrait — place tommy.png in same folder as this file -->
+  <div class="tommy-wrap">
+    <img class="tommy-img" src="tommy.png" alt="Tommy"
+      onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+    <div class="tommy-fallback" style="display:none;">
+      <p>Save your Tommy pixel dissolve image as <strong>tommy.png</strong> in the same folder as this file</p>
+    </div>
+  </div>
+
+  <p class="hero-eyebrow">A portrait. A keepsake. A forever.</p>
+  <h1>Alvida Tommy<em>The Goodbye They Deserve</em></h1>
+  <p class="hero-tagline">"Teri yaad hamesha rahegi."</p>
+  <p class="hero-hindi">अलविदा का मतलब भूलना नहीं है।</p>
+  <div class="proceeds-badge">
+    🐾 Part of every order goes toward animal care & emergency vet services
+  </div>
+
+</section>
+
+<!-- ── HOOK ── -->
+<section class="hook">
+  <p>
+    Some bonds don't end. They dissolve — like pixels scattering into light —
+    but the <em>eye stays.</em> The soul stays. The love stays.
+  </p>
+  <p>
+    We turn your pet's photograph into the same artwork made for Tommy.
+    Their breed. Their gaze. Their amber eye. Yours forever.
+  </p>
+</section>
+
+<div class="div-line"><span>🐾</span></div>
+
+<!-- ── ORDER FORM ── -->
+<section class="order-wrap">
+  <span class="order-label">Create a Portrait</span>
+  <h2>Tell us about your pet.</h2>
+  <p class="sub">Just a photo and a name. We'll handle everything else.</p>
+
+  <div class="keepsakes">
+    <div class="keepsake on" onclick="selectK(this,'Framed Portrait Print','₹619')">
+      <div class="k-icon">🖼️</div>
+      <div class="k-body">
+        <div class="k-name">Framed Portrait Print</div>
+        <div class="k-sub">10×10 inch · Hang where you felt them most</div>
+      </div>
+      <div class="k-price">₹619</div>
+    </div>
+    <div class="keepsake" onclick="selectK(this,'Memory Mug','₹459')">
+      <div class="k-icon">☕</div>
+      <div class="k-body">
+        <div class="k-name">Memory Mug</div>
+        <div class="k-sub">Start every morning with their face in your hands</div>
+      </div>
+      <div class="k-price">₹459</div>
+    </div>
+    <div class="keepsake" onclick="selectK(this,'Portrait T-Shirt','₹699')">
+      <div class="k-icon">👕</div>
+      <div class="k-body">
+        <div class="k-name">Portrait T-Shirt</div>
+        <div class="k-sub">Carry them everywhere you go</div>
+      </div>
+      <div class="k-price">₹699</div>
+    </div>
+    <div class="keepsake" onclick="selectK(this,'Full Memory Set','₹1,199')">
+      <div class="k-icon">🎁</div>
+      <div class="k-body">
+        <div class="k-name">Full Memory Set</div>
+        <div class="k-sub">Print + Mug · For you or someone who is grieving</div>
+      </div>
+      <div class="k-price">₹1,199</div>
+    </div>
+  </div>
+
+  <div class="form-body">
+    <div class="field">
+      <label>Your Pet's Name</label>
+      <input type="text" id="pet-name" placeholder="What did you call them?">
+    </div>
+    <div class="field">
+      <label>A Line to Remember Them By</label>
+      <input type="text" id="dedication" placeholder="Forever in our hearts · 2018–2024">
+    </div>
+    <div class="field">
+      <label>Your Name & WhatsApp Number</label>
+      <input type="text" id="contact" placeholder="Name · +91 XXXXXXXXXX">
+    </div>
+    <div class="field">
+      <label>Delivery Address</label>
+      <textarea id="address" placeholder="Full address with PIN code"></textarea>
+    </div>
+    <div class="field">
+      <label>Their Photo</label>
+      <div class="upload-zone">
+        <input type="file" id="pet-photo" accept="image/*" onchange="showFile(this)">
+        <div class="uz-icon">📷</div>
+        <p>Tap to upload your pet's photo</p>
+        <p class="uz-sub">Any clear photo works — we handle the rest</p>
+        <div class="uz-name" id="fname"></div>
+      </div>
+    </div>
+    <div class="field">
+      <label>Anything Else</label>
+      <textarea id="notes" placeholder="A special detail. A second line. A message if it's a gift."></textarea>
+    </div>
+
+    <a class="btn-wa" href="#" onclick="return sendWhatsApp()">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+      </svg>
+      Send Us Your Pet's Photo
+    </a>
+    <div class="or-div"><span>OR</span></div>
+    <button class="btn-copy" onclick="copyOrder()">Copy order details to paste anywhere</button>
+    <div class="success-msg" id="success">
+      <p>Copied. Paste in WhatsApp to <strong>+91 91024 15624</strong> and attach your pet's photo. We confirm within 2 hours.</p>
+    </div>
+  </div>
+</section>
+
+<div class="div-line"><span>🐾</span></div>
+
+<!-- ── TOMMY'S STORY ── -->
+<section class="story">
+  <p class="s-label">Why This Exists</p>
+  <h2>Tommy was a blue-grey Pitbull from Buxar, Bihar.<br>She looked at the world with <em>complete trust.</em></h2>
+  <p>She was lost because emergency veterinary care didn't reach Tier 3 India in time. She was the softest creature in the most misunderstood body.</p>
+  <p>Every portrait we create answers one question:<br>
+    <em style="color:rgba(196,130,10,0.75);">What if we had reached her in time?</em>
+  </p>
+  <p>A part of every order goes directly toward animal care and emergency veterinary service facilitation — so no family has to feel what we felt.</p>
+</section>
+
+<!-- ── PROMISE ── -->
+<section class="promise">
+  <div class="promise-items">
+    <div class="pi">
+      <div class="pi-dot"></div>
+      <div class="pi-text">
+        <h3>Your pet's breed. Their exact look.</h3>
+        <p>Every illustration is created from your pet's own photo — their fur, their gaze, their presence. Not a template.</p>
+      </div>
+    </div>
+    <div class="pi">
+      <div class="pi-dot"></div>
+      <div class="pi-text">
+        <h3>You approve before we print.</h3>
+        <p>We send you the digital artwork first. If it doesn't feel right, we refine it until it does.</p>
+      </div>
+    </div>
+    <div class="pi">
+      <div class="pi-dot"></div>
+      <div class="pi-text">
+        <h3>Delivered anywhere in India. In 7 days.</h3>
+        <p>Carefully packed and shipped as if it were irreplaceable — because it is.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CLOSING ── -->
+<section class="closing">
+  <blockquote>"They gave you everything.<br>Give them <em>forever.</em>"</blockquote>
+  <p class="attrib">— Alvida Tommy · The Goodbye They Deserve</p>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <p>
+    Alvida Tommy is a tribute project under <a href="https://pawsoul.in">PawSoul Technologies Pvt Ltd</a><br>
+    Buxar, Bihar · India-wide delivery<br>
+    Instagram: <a href="https://instagram.com/pawsoul.memories">@pawsoul.memories</a> · WhatsApp: +91 91024 15624<br><br>
+    Part of every order goes toward animal care & emergency vet service facilitation.<br><br>
+    For Tommy. For every pet that followed.<br>
+    And for every family still learning to say goodbye.
+  </p>
+</footer>
+
+<script>
+const WA = '919102415624';
+let selProduct = 'Framed Portrait Print';
+let selPrice   = '₹619';
+
+function selectK(el, name, price) {
+  document.querySelectorAll('.keepsake').forEach(k => k.classList.remove('on'));
+  el.classList.add('on');
+  selProduct = name; selPrice = price;
+}
+function showFile(input) {
+  const el = document.getElementById('fname');
+  if (input.files[0]) { el.textContent = '✓ ' + input.files[0].name; el.style.display = 'block'; }
+}
+function buildOrder() {
+  const pet  = document.getElementById('pet-name').value.trim()   || '—';
+  const ded  = document.getElementById('dedication').value.trim() || '—';
+  const cont = document.getElementById('contact').value.trim()    || '—';
+  const addr = document.getElementById('address').value.trim()    || '—';
+  const note = document.getElementById('notes').value.trim()      || '—';
+  return `🐾 *Alvida Tommy — Portrait Order*\n\n` +
+    `*Pet's Name:* ${pet}\n` +
+    `*Keepsake:* ${selProduct} (${selPrice})\n` +
+    `*Dedication:* ${ded}\n` +
+    `*Contact:* ${cont}\n` +
+    `*Address:* ${addr}\n` +
+    `*Notes:* ${note}\n\n` +
+    `_(Attaching pet's photo separately)_\n\n` +
+    `via alvidatommy · pawsoul.in`;
+}
+function sendWhatsApp() {
+  if (!document.getElementById('pet-name').value.trim()) {
+    alert("Please tell us your pet's name first."); return false;
+  }
+  window.open(`https://wa.me/${WA}?text=${encodeURIComponent(buildOrder())}`, '_blank');
+  return false;
+}
+function copyOrder() {
+  if (!document.getElementById('pet-name').value.trim()) {
+    alert("Please tell us your pet's name first."); return;
+  }
+  navigator.clipboard.writeText(buildOrder()).then(() => {
+    document.getElementById('success').style.display = 'block';
+  }).catch(() => { prompt('Copy this:', buildOrder()); });
+}
+</script>
+</body>
+</html>
